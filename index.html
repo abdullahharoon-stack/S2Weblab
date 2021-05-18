@@ -16,7 +16,7 @@
         }
 
         .buttonss{
-            background-color: #4cafaa; 
+            background-color: #874caf; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -33,7 +33,7 @@
 			$('#jsonTable').css("visibility", "visible").css("border", "1px solid green");
 			$('#jsonTable').append("<tbody>");
 			for (var counter = 0; counter < json.length; counter++) {
-				$('#jsonTable').append("<tr><td>" + json[counter].id + "</td><td>" + json[counter].name + "</td><td>" + json[counter].email + "</td><td><a href="+"new.html"+">Edit</a> </td></tr>");
+				$('#jsonTable').append("<tr><td>" + json[counter].id + "</td><td>" + json[counter].name + "</td><td>" + json[counter].email + "</td><td><a href="+"new.html"+">Edit</a> , <a href="+"remove.html"+">Remove</a> </td></tr>");
 			}
 			$('#jsonTable').append("</tbody>");
 			$('th').css("border", "1px solid green");
@@ -55,7 +55,7 @@
 
     function ValidateEmail(mail) 
 {
- if (/^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/.test(myForm.emailAddr.value))
+ if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value))
   {
     return (true)
   }
